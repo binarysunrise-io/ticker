@@ -25,6 +25,7 @@ executable ticker
   hs-source-dirs:      app
   main-is:             Main.hs
   build-depends:       base
+                     , optparse-applicative
                      , ticker
 
 test-suite spec

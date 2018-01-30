@@ -1,17 +1,12 @@
 module LibSpec where
 
-import Test.Hspec
-import Test.Hspec.QuickCheck
-
-import Lib (ourAdd)
+import           Test.Hspec
 
 main :: IO ()
 main = hspec spec
 
 spec :: Spec
 spec =
-  describe "Lib" $ do
-    it "works" $ do
+  describe "Lib" $
+    it "works" $
       True `shouldBe` True
-    prop "ourAdd is commutative" $ \x y ->
-      ourAdd x y `shouldBe` ourAdd y x
