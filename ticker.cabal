@@ -17,7 +17,11 @@ library
   ghc-options:         -Wall
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , Lib.Types
   build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , time
+                     , text
 
 executable ticker
   default-language:    Haskell2010
