@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    ubuntu-14.04:
+        command: ./build-project.sh
+        build: ubuntu-14.04
+        volumes:
+            - ../pkg:/project/pkg
+            - ../:/project:ro
+        tmpfs:
+            - /project/.stack-work
+        working_dir: /project/build
