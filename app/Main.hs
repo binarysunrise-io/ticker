@@ -5,6 +5,7 @@ module Main where
 import           Control.Monad.Logger (LogLevel (..), LogSource, filterLogger,
                                        runStderrLoggingT)
 import           Data.Semigroup       ((<>))
+import           Lib.Reporter         (reportMeasurement)
 import           Lib.Types            (Amplitude (..), StreamName (..))
 import           Options.Applicative
 
@@ -47,7 +48,7 @@ main = do
   (loggingFilter, reportArgs) <- customExecParser pref opts
 
   runStderrLoggingT . filterLogger loggingFilter $
-    undefined reportArgs
+    reportMeasurement reportArgs
 
   where
     pref = prefs showHelpOnEmpty

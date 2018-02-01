@@ -17,11 +17,23 @@ library
   ghc-options:         -Wall
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , Lib.Constants
+                     , Lib.Reporter
                      , Lib.Types
   build-depends:       base >= 4.7 && < 5
                      , aeson
-                     , time
+                     , amazonka
+                     , amazonka-sqs
+                     , amazonka-sts
+                     , binary
+                     , bytestring
+                     , exceptions
+                     , lens
+                     , monad-control
+                     , monad-logger
                      , text
+                     , time
+                     , transformers
 
 executable ticker
   default-language:    Haskell2010
