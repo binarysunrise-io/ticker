@@ -2,4 +2,6 @@
 
 [![Build Status](https://travis-ci.org/githubuser/ticker.png)](https://travis-ci.org/githubuser/ticker)
 
-TODO Description.
+## Description
+
+Ticker is a CLI tool for reporting GMF-style metrics to Metronome over SQS.

@@ -1,0 +1,34 @@
+ticker(1) -- CLI tool for reporting events to Metronome
+=======================================================
+
+## SYNOPSIS
+
+`ticker` [-l|--logging LEVEL] STREAMNAME AMPLITUDE
+
+## DESCRIPTION
+
+The ticker(1) command reports events to Metronome.
+
+## OPTIONS
+
+ticker(1) accepts the following options:
+
+* `--logging` or `-l` <LEVEL>: Set run logging to the given <LEVEL>. See the usage for supported levels.
+
+## ARGUMENTS
+
+* `STREAMNAME`: the name of the event stream to report on.
+* `AMPLITUDE`: the numeric size of the event. Amplitudes are expressed as double-precision floating-point numbers.
+
+## AWS CREDENTIALS
+
+ticker(1) will use the following mechanisms to locate AWS credentials:
+
+  1. Consulting `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables.
+  2. Reading the *default* profile keys from `${HOME}/.aws/credentials`.
+  3. Contacting the ECS container agent if the environment variable `envContainerCredentialsURI` is set.
+  4. Reading the first available EC2 IAM profile, if on EC2.
+
+## COPYRIGHT
+
+Copyright 2018 Binary Sunrise, Inc. All rights reserved.
